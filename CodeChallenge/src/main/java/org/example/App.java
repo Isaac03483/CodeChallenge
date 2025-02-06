@@ -13,7 +13,7 @@ public class App {
     }
 
     /*
-     * Complejidad del algoritmo O(n + m + p)
+     * Complejidad del algoritmo: O(n + m + p)
      * 
      */
     public boolean checkAnagrama(String word1, String word2) {  // O(n) + O(p) + O(m) = O(n + m + p)
