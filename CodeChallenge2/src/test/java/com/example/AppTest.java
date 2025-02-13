@@ -79,7 +79,7 @@ public class AppTest
     void shouldTransformObjectToArrayWithList() {
         App app = new App();
         Object[] array = new Object[]{1, 2, new Object[]{"3", "4"}};
-        Object[] result = app.transform(array);
+        Object[] result = app.transformArray(array);
         Object[] expected = new Object[]{1, 2, "3", "4"};
         assertArrayEquals(expected, result);
     }
@@ -88,7 +88,7 @@ public class AppTest
     void shouldHaveSameArrayWithList() {
         App app = new App();
         Object[] array = new Object[]{1, 2, 3, 4};
-        Object[] result = app.transform(array);
+        Object[] result = app.transformArray(array);
         assertNotNull(result);
         assertArrayEquals(array, result);
     }
@@ -97,7 +97,7 @@ public class AppTest
     void shouldTransformeMultipleArraysWithList() {
         App app = new App();
         Object[] array = new Object[]{1, 2, new Object[]{"3", "4", new Object[]{5, 6}}};
-        Object[] result = app.transform(array);
+        Object[] result = app.transformArray(array);
         Object[] expected = new Object[]{1, 2, "3", "4", 5, 6};
         assertArrayEquals(expected, result);
     }
@@ -106,7 +106,7 @@ public class AppTest
     void shouldTransformeMultipleArraysWithLettersWithList() {
         App app = new App();
         Object[] array = new Object[]{1, 2, new Object[]{"a", "b", new Object[]{5, 6}}};
-        Object[] result = app.transform(array);
+        Object[] result = app.transformArray(array);
         Object[] expected = new Object[]{1, 2, "a", "b", 5, 6};
         assertArrayEquals(expected, result);
     }
@@ -115,7 +115,7 @@ public class AppTest
     void shouldTransformeMultipleArrays2WithList() {
         App app = new App();
         Object[] array = new Object[]{1, 2, new Object[]{3, 4, new Object[]{5, 6, new Object[]{7, 8, new Object[]{9, 10}}}}};
-        Object[] result = app.transform(array);
+        Object[] result = app.transformArray(array);
         Object[] expected = new Object[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         assertArrayEquals(expected, result);
     }
@@ -123,9 +123,9 @@ public class AppTest
     @Test
     void shouldTransformeMultipleArrays3WithList() {
         App app = new App();
-        Object[] array = new Object[]{1, 2, new Object[]{3, 4, new Object[]{5, 6, new Object[]{7, 8, new Object[]{9, 10}}}}};
-        Object[] result = app.transform(array);
-        Object[] expected = new Object[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        Object[] array = new Object[]{1, 2, new Object[]{3, 4, new Object[]{5, 6, new Object[]{7, 8, new Object[]{9, 10}}}}, 11};
+        Object[] result = app.transformArray(array);
+        Object[] expected = new Object[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11};
         assertArrayEquals(expected, result);
     }
 }
