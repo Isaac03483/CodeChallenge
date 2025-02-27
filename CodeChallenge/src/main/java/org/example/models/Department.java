@@ -11,11 +11,11 @@ public class Department {
         this.studentMarks = new HashMap<Student, Integer>();
     }
 
-    public void addStudent(Student student, Integer mark) {
+    public void addStudent(Student student, Integer mark) { // O(1)
         this.studentMarks.put(student, mark);
     }
 
-    public String showStudents() {
+    public String showStudents() { // O(n)
         //TODO: LOGIC TO PRINT STUDENTS AND MARKS
         StringBuilder builder = new StringBuilder();
 
