@@ -12,6 +12,8 @@ public class Department {
     }
 
     public void addStudent(Student student, Integer mark) { // O(1)
+        Integer value = this.studentMarks.get(student);
+        if(value != null) this.studentMarks.remove(student);
         this.studentMarks.put(student, mark);
     }
 

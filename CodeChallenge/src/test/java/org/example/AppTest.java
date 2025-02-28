@@ -67,8 +67,8 @@ public class AppTest {
 
         // Then
         Map<Student, Integer> expected = new HashMap<>();
-        expected.put(student1, 20);
-        expected.put(student3, 40);
+        expected.put(student2, 20);
+        expected.put(student4, 40);
 
         var actual = department.getStudentMarks();
 
