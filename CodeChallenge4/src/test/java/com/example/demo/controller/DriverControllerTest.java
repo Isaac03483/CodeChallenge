@@ -49,7 +49,7 @@ public class DriverControllerTest {
     @Test
     void save() throws Exception {
         DriverRequest driverRequest = new DriverRequest("test name", 20);
-        String json = "{'name': '" + driverRequest.name() + "', 'age': '" + driverRequest.age() + "'}";
+        String json = "{\"name\": \"test name\", \"age\": 20}";
         when(driverService.saveDriver("test name", 20)).thenReturn(driverDTO);
 
         mockMvc.perform(post("/api/v1/driver/save")
