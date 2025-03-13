@@ -26,10 +26,10 @@ public class DriverRepositoryTest {
     
     @Test
     void shouldSaveADriver() {
-        Driver expected = new Driver(1, "test name", 20);
+        Driver expected = new Driver(1, "test name", 20, true);
 
         //Given driver
-        driver = new Driver(null, "test name", 20);
+        driver = new Driver(null, "test name", 20, true);
         
         //When
         when(this.driverRepository.save(driver)).thenReturn(expected);
@@ -37,16 +37,16 @@ public class DriverRepositoryTest {
 
         String expectedName = "test name";
         assertNotNull(actual);
-        assertEquals(expectedName, actual.name());
+        assertEquals(expectedName, actual.getName());
         assertEquals(expected, actual);
     }
 
     @Test
     void shouldListAll() {
-        Driver expected = new Driver(1, "test name", 20);
+        Driver expected = new Driver(1, "test name", 20, true);
 
         //Given driver
-        driver = new Driver(null, "test name", 20);
+        driver = new Driver(null, "test name", 20, true);
         
         //When
         when(this.driverRepository.save(driver)).thenReturn(expected);
