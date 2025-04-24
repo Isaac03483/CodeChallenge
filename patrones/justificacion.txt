@@ -1,0 +1,20 @@
+Justificación:
+Para abordar el problema de Crear pedidos personalizados con combinaciones variables de platos, 
+bebidas y extras. El patrón de diseño que encaja de mejor manera con este problema es builder. 
+Este patrón de diseño nos permite crear pedidos en base a las necesidades del cliente, en el que 
+el cliente agregará únicamente lo que el desee. Puede ser varios platos o varias bebidas o varios extras.
+
+En el caso de la integración con el sistema de cocina (un sistema de terceros) que utiliza un formato de 
+datos distinto al del área de atención al cliente. El patrón de diseño que nos ayudaría a resolver dicho 
+problema es Adapter, este patrón de diseño permite la colaboración entre objetos con interfaces incompatibles. 
+Básicamente lo que debemos hacer es utilizar un objeto que convierta el formato utilizado en el área de atención 
+al cliente al formato que utilice y entienda dicho sistema.
+
+Para el problema con la gestión de pedidos, podemos abordarlo con ayuda de command. Este patrón de diseño es 
+útil cuando por ejemplo lo que queremos hacer es encolar operaciones y en este caso en específico, implementar 
+operaciones reversibles. En este caso podemos encolar todos los pedidos y revertirlos o cancelarlos en caso de 
+que el cliente lo requiera. Otra ventaja es que podemos ejecutar todas estas acciones de manera remota.
+
+Por último para el el caso de los descuentos, se puede implementar un algoritmo con ayuda de Strategy, este patrón 
+de diseño nos permite intercambiar algoritmos en tiempo de ejecución dentro del mismo sistema en base al cliente o 
+las promociones temporales. También es útil ya que nos permite aislar la lógica de negocio para el manejo de descuentos.
